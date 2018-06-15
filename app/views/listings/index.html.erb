@@ -4,4 +4,9 @@
 	RM <%= t.price %>
 <% end %>
 
-<%= link_to "Listing", new_listing_path %>
+<% if current_user.admin? || current_user.host? %>
+	<%= link_to "Create new listing", new_listing_path %>
+<% end %>
+<% if current_user.admin? || current_user.moderator? %>
+	<%= link_to "Unverified Listings", admin_listings_path %>
+<% end %>

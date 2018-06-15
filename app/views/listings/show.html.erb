@@ -1,3 +1,6 @@
-<%= t.name %>
-<%= t.location %>
-RM <%= t.price %>
+<%= @listing.name %>
+<%= @listing.location %>
+RM <%= @listing.price %>
+
+<%= link_to "Edit", edit_listing_path(@listing) %>
+<%= button_to "Delete", listing_path(@listing), method: :delete, data: {confirm: "u sure?"} %>

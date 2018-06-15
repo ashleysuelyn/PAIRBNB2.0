@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   root "welcome#index" #or get '/' => "welcome#index" #go to homepage
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
+  get "/admin/listings" => "admins#unverified_listings", as: "admin_listings"
+
+  post "/listing/:id/verify" => "listings#verify", as: "verify"
+
   resources :listings 
 
 

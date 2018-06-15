@@ -1,0 +1,8 @@
+<% @listings.each do |t| %>
+	<%= t.name %>
+	<%= t.location %>
+	RM <%= t.price %>
+	<%= button_to "Verify", verify_path(t) %>
+<% end %>
+
+<%= link_to "Listing", new_listing_path %>
