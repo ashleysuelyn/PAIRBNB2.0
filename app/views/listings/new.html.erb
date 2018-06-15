@@ -1,0 +1,17 @@
+<%= form_for @listing do |x| %>
+	Location: <%= x.text_field :location, placeholder: "Location" %></br>
+    Tags <%= x.text_field :tags %></br>
+    Name <%= x.text_field :name %></br>
+    Place Type<%= x.number_field :place_type %></br>
+   	Property Type<%= x.text_field :property_type %></br>
+    Room Number<%= x.number_field :room_number %></br>
+    Bed Number<%= x.number_field :bed_number %></br>
+    <%= x.number_field :guest_number %></br>
+   	<%= x.text_field :country %></br>
+   	<%= x.text_field :state %></br>
+   	<%= x.text_field :city %></br>
+    <%= x.number_field :zipcode %></br>
+    <%= x.number_field :price %></br>
+   	<%= x.text_field :description %></br>
+   	<%= x.submit %>
+<% end %>

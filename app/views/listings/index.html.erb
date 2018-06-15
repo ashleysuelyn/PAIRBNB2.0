@@ -1,0 +1,7 @@
+<% @listings.each do |t| %>
+	<%= t.name %>
+	<%= t.location %>
+	RM <%= t.price %>
+<% end %>
+
+<%= link_to "Listing", new_listing_path %>
